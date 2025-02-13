@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'products',
 ]
 
 MIDDLEWARE = [
@@ -82,9 +83,9 @@ WSGI_APPLICATION = 'salewise.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'salewise_db',   
+        'NAME': 'salewise-db',   
         'USER': 'postgres', 
-        'PASSWORD': 'Dickson@1038', 
+        'PASSWORD': '103899', 
         'HOST': 'localhost',
         'PORT': '5432',
     }
