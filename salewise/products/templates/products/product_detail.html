@@ -5,13 +5,24 @@
 </head>
 <body>
     <h1>{{ product.name }}</h1>
+
+    {% if product.image %}
+        <img src="{{ product.image.url }}" alt="{{ product.name }}" style="max-width: 300px;">
+    {% else %}
+        <p>No image available</p>
+    {% endif %}
+
     <p>{{ product.description }}</p>
     <p>Price: {{ product.price }}</p>
+    
     <a href="{% url 'product_update' product.id %}">Edit</a>
+
     <form action="{% url 'product_delete' product.id %}" method="post">
         {% csrf_token %}
         <button type="submit">Delete</button>
     </form>
+
     <a href="{% url 'product_list' %}">Back to List</a>
 </body>
 </html>
+
